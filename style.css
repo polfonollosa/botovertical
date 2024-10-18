@@ -1,0 +1,38 @@
+.vinyeta {
+      position: absolute;
+      top: 30%; /* Ajusta la posición inicial de la vinyeta */
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: gray; /* Fondo gris */
+      color: white; /* Texto blanco */
+      border-radius: 8px; /* Esquinas redondeadas */
+      padding: 16px; /* Espaciado interno */
+      z-index: 10; /* Asegura que la vinyeta esté por encima */
+    }
+
+    /* Flecha que apunta hacia el botón */
+    .vinyeta::after {
+      content: "";
+      position: absolute;
+      top: 100%; /* Posiciona la flecha justo debajo de la vinyeta */
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 30px; /* Tamaño de la flecha */
+      border-style: solid;
+      border-color: gray transparent transparent transparent; /* Flecha gris */
+    }
+
+    /* Mover el botón hacia abajo */
+    .move-down {
+      transform: translateY(250px); /* Mueve el botón hacia abajo */
+      background-color: red !important; /* Cambia el color del botón a rojo */
+    }
+
+    .hidden {
+      display: none; /* Ocultar elementos */
+    }
+
+    /* Transición suave para el botón */
+    button {
+      transition: transform 0.5s ease, background-color 0.5s ease;
+    }
